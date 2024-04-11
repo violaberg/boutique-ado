@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'products',
     'bag',
     'checkout',
-    'cripsy_forms',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -77,11 +77,12 @@ TEMPLATES = [
                 'django.template.context_processors.request', #required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
                 'bag.contexts.bag_contents',
             ],
             'builtins': [
-                'cripsy_forms.templatetags.cripsy_forms_tags',
-                'cripsy_forms.templatetags.cripsy_forms_field',
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
             ]
         },
     },
